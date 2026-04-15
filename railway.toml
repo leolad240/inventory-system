@@ -11,4 +11,4 @@ restartPolicyType = "ON_FAILURE"
 
 [build.setup]
 # Ensure PHP and Node.js are available (nixpacks usually handles this, but being explicit is safer)
-nixPkgs = ["php83", "nodejs", "npm"]
+nixPkgs = ["php83", "nodejs_20", "npm"]
