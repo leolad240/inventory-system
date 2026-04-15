@@ -6,7 +6,7 @@ builder = "nixpacks"
 [deploy]
 # Run migrations automatically before the app starts
 startCommand = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
-healthcheckPath = "/"
+# Railway will automatically check if the port is open
 restartPolicyType = "ON_FAILURE"
 
 [build.setup]
