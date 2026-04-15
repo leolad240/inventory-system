@@ -1,0 +1,14 @@
+# Railway Configuration for Laravel
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+# Run migrations automatically before the app starts
+startCommand = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
+healthcheckPath = "/"
+restartPolicyType = "on-failure"
+
+[build.setup]
+# Ensure PHP and Node.js are available (nixpacks usually handles this, but being explicit is safer)
+nixPkgs = ["php83", "nodejs", "npm"]
