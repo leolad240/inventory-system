@@ -4,12 +4,14 @@
         <p class="text-gray-500 mt-1 text-sm">Sign in to your account</p>
     </div>
 
+    {{--
     <!-- Demo credentials -->
     <div class="mb-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4 text-sm">
         <p class="font-semibold text-indigo-800 mb-2">Demo Credentials</p>
         <p class="text-indigo-700"><strong>Admin:</strong> admin@demo.com / password</p>
         <p class="text-indigo-700"><strong>Staff:</strong> staff@demo.com / password</p>
     </div>
+    --}}
 
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
