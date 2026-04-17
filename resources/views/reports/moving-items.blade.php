@@ -31,7 +31,7 @@
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-3 font-medium text-gray-900">{{ $item->product->name }}</td>
                                 <td class="px-4 py-3 text-right font-semibold text-emerald-600">{{ $item->total_sold }}</td>
-                                <td class="px-4 py-3 text-right text-gray-600">${{ number_format($item->total_revenue, 2) }}</td>
+                                <td class="px-4 py-3 text-right text-gray-600">₦{{ number_format($item->total_revenue, 2) }}</td>
                             </tr>
                         @empty
                             <tr><td colspan="3" class="px-4 py-6 text-center text-gray-500">No sales data.</td></tr>
@@ -61,7 +61,7 @@
                             <tr class="hover:bg-gray-50">
                                 <td class="px-4 py-3 font-medium text-gray-900">{{ $item->product->name }}</td>
                                 <td class="px-4 py-3 text-right font-semibold text-amber-600">{{ $item->total_sold }}</td>
-                                <td class="px-4 py-3 text-right text-gray-600">${{ number_format($item->total_revenue, 2) }}</td>
+                                <td class="px-4 py-3 text-right text-gray-600">₦{{ number_format($item->total_revenue, 2) }}</td>
                             </tr>
                         @empty
                             <tr><td colspan="3" class="px-4 py-6 text-center text-gray-500">No sales data.</td></tr>
@@ -94,7 +94,7 @@
                                     <td class="px-4 py-3 font-medium text-gray-900">{{ $product->name }}</td>
                                     <td class="px-4 py-3 text-gray-500">{{ $product->category?->name ?? '—' }}</td>
                                     <td class="px-4 py-3 text-right text-gray-600">{{ $product->quantity }}</td>
-                                    <td class="px-4 py-3 text-right font-medium">${{ number_format($product->stock_value, 2) }}</td>
+                                    <td class="px-4 py-3 text-right font-medium">₦{{ number_format($product->stock_value, 2) }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

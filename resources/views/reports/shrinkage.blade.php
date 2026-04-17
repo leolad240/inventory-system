@@ -16,7 +16,7 @@
         </div>
         <div class="bg-red-50 rounded-xl border border-red-200 p-5">
             <p class="text-xs text-red-500 uppercase tracking-wider mb-1">Total Value Lost</p>
-            <p class="text-2xl font-bold text-red-700">${{ number_format($totalShrinkageValue, 2) }}</p>
+            <p class="text-2xl font-bold text-red-700">₦{{ number_format($totalShrinkageValue, 2) }}</p>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
                         <td class="px-6 py-3 font-medium text-gray-900">{{ $m->product->name }}</td>
                         <td class="px-6 py-3 text-gray-500">{{ $m->product->category?->name ?? '—' }}</td>
                         <td class="px-6 py-3 text-right font-semibold text-red-600">{{ abs($m->quantity) }}</td>
-                        <td class="px-6 py-3 text-right font-semibold text-red-600">${{ number_format(abs($m->quantity) * $m->product->cost_price, 2) }}</td>
+                        <td class="px-6 py-3 text-right font-semibold text-red-600">₦{{ number_format(abs($m->quantity) * $m->product->cost_price, 2) }}</td>
                         <td class="px-6 py-3 text-gray-500 text-xs">{{ $m->notes ?? '—' }}</td>
                         <td class="px-6 py-3 text-gray-500 text-xs">{{ $m->user?->name ?? 'System' }}</td>
                         <td class="px-6 py-3 text-gray-500 text-xs">{{ $m->created_at->format('M d, Y') }}</td>

@@ -5,15 +5,15 @@
     <div class="mt-2 grid grid-cols-3 gap-4 mb-6">
         <div class="bg-white rounded-xl border border-gray-200 p-5">
             <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Cost Value</p>
-            <p class="text-2xl font-bold text-gray-900">${{ number_format($totalCostValue, 2) }}</p>
+            <p class="text-2xl font-bold text-gray-900">₦{{ number_format($totalCostValue, 2) }}</p>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-5">
             <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Retail Value</p>
-            <p class="text-2xl font-bold text-gray-900">${{ number_format($totalRetailValue, 2) }}</p>
+            <p class="text-2xl font-bold text-gray-900">₦{{ number_format($totalRetailValue, 2) }}</p>
         </div>
         <div class="bg-emerald-50 rounded-xl border border-emerald-200 p-5">
             <p class="text-xs text-emerald-600 uppercase tracking-wider mb-1">Potential Profit</p>
-            <p class="text-2xl font-bold text-emerald-700">${{ number_format($totalPotentialProfit, 2) }}</p>
+            <p class="text-2xl font-bold text-emerald-700">₦{{ number_format($totalPotentialProfit, 2) }}</p>
         </div>
     </div>
 
@@ -37,10 +37,10 @@
                         <td class="px-6 py-3 font-medium text-gray-900">{{ $product->name }}</td>
                         <td class="px-6 py-3 text-gray-500">{{ $product->category?->name ?? '—' }}</td>
                         <td class="px-6 py-3 text-right">{{ $product->quantity }}</td>
-                        <td class="px-6 py-3 text-right text-gray-600">${{ number_format($product->cost_price, 2) }}</td>
-                        <td class="px-6 py-3 text-right text-gray-600">${{ number_format($product->selling_price, 2) }}</td>
-                        <td class="px-6 py-3 text-right font-medium">${{ number_format($product->stock_value, 2) }}</td>
-                        <td class="px-6 py-3 text-right font-medium">${{ number_format($product->retail_value, 2) }}</td>
+                        <td class="px-6 py-3 text-right text-gray-600">₦{{ number_format($product->cost_price, 2) }}</td>
+                        <td class="px-6 py-3 text-right text-gray-600">₦{{ number_format($product->selling_price, 2) }}</td>
+                        <td class="px-6 py-3 text-right font-medium">₦{{ number_format($product->stock_value, 2) }}</td>
+                        <td class="px-6 py-3 text-right font-medium">₦{{ number_format($product->retail_value, 2) }}</td>
                         <td class="px-6 py-3 text-right font-semibold {{ $product->cost_price > 0 && $product->selling_price > $product->cost_price ? 'text-emerald-600' : 'text-red-500' }}">
                             @if($product->cost_price > 0)
                                 {{ number_format((($product->selling_price - $product->cost_price) / $product->cost_price) * 100, 1) }}%

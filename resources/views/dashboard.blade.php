@@ -28,7 +28,7 @@
                     <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
             </div>
-            <p class="text-2xl font-bold text-gray-900">${{ number_format($totalStockValue, 2) }}</p>
+            <p class="text-2xl font-bold text-gray-900">₦{{ number_format($totalStockValue, 2) }}</p>
             <p class="text-xs text-gray-500 mt-1">At cost price</p>
         </div>
 
@@ -39,8 +39,8 @@
                     <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                 </div>
             </div>
-            <p class="text-2xl font-bold text-gray-900">${{ number_format($todaySales, 2) }}</p>
-            <p class="text-xs text-gray-500 mt-1">Monthly: ${{ number_format($monthlySales, 2) }}</p>
+            <p class="text-2xl font-bold text-gray-900">₦{{ number_format($todaySales, 2) }}</p>
+            <p class="text-xs text-gray-500 mt-1">Monthly: ₦{{ number_format($monthlySales, 2) }}</p>
         </div>
 
         <div class="bg-white rounded-xl border border-gray-200 p-5">
@@ -107,7 +107,7 @@
                                 <p class="text-sm font-medium text-gray-900">{{ $sale->sale_number }}</p>
                                 <p class="text-xs text-gray-500">{{ $sale->customer_name ?? 'Walk-in' }} &bull; {{ $sale->created_at->diffForHumans() }}</p>
                             </div>
-                            <span class="text-sm font-semibold text-emerald-600">${{ number_format($sale->total_amount, 2) }}</span>
+                            <span class="text-sm font-semibold text-emerald-600">₦{{ number_format($sale->total_amount, 2) }}</span>
                         </div>
                     @endforeach
                 </div>

@@ -29,7 +29,7 @@
                     <div class="mt-4 pt-4 border-t border-gray-100 flex justify-end">
                         <div class="text-right">
                             <p class="text-xs text-gray-500">Total Amount</p>
-                            <p class="text-2xl font-bold text-gray-900">$<span id="saleTotal">0.00</span></p>
+                            <p class="text-2xl font-bold text-gray-900">₦<span id="saleTotal">0.00</span></p>
                         </div>
                     </div>
                 </div>

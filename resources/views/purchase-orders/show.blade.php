@@ -75,15 +75,15 @@
                                 <td class="px-5 py-3 font-medium text-gray-900">{{ $item->product->name }}</td>
                                 <td class="px-5 py-3 text-right text-gray-600">{{ $item->quantity }}</td>
                                 <td class="px-5 py-3 text-right {{ $item->received_quantity >= $item->quantity ? 'text-emerald-600 font-medium' : 'text-gray-600' }}">{{ $item->received_quantity }}</td>
-                                <td class="px-5 py-3 text-right text-gray-600">${{ number_format($item->unit_cost, 2) }}</td>
-                                <td class="px-5 py-3 text-right font-semibold">${{ number_format($item->subtotal, 2) }}</td>
+                                <td class="px-5 py-3 text-right text-gray-600">₦{{ number_format($item->unit_cost, 2) }}</td>
+                                <td class="px-5 py-3 text-right font-semibold">₦{{ number_format($item->subtotal, 2) }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                     <tfoot class="bg-gray-50 border-t border-gray-200">
                         <tr>
                             <td colspan="4" class="px-5 py-3 text-right text-sm font-semibold text-gray-700">Total</td>
-                            <td class="px-5 py-3 text-right text-sm font-bold">${{ number_format($purchaseOrder->total_amount, 2) }}</td>
+                            <td class="px-5 py-3 text-right text-sm font-bold">₦{{ number_format($purchaseOrder->total_amount, 2) }}</td>
                         </tr>
                     </tfoot>
                 </table>

@@ -48,7 +48,7 @@
                         <!-- Items added dynamically -->
                     </div>
                     <div class="mt-3 text-right">
-                        <span class="text-sm font-semibold text-gray-700">Total: $<span id="orderTotal">0.00</span></span>
+                        <span class="text-sm font-semibold text-gray-700">Total: ₦<span id="orderTotal">0.00</span></span>
                     </div>
                 </div>
 

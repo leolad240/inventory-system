@@ -17,7 +17,7 @@
                     @endif
                     <div class="border-t border-gray-100 pt-3">
                         <p class="text-gray-500 text-xs">Total Amount</p>
-                        <p class="text-2xl font-bold text-emerald-600">${{ number_format($sale->total_amount, 2) }}</p>
+                        <p class="text-2xl font-bold text-emerald-600">₦{{ number_format($sale->total_amount, 2) }}</p>
                     </div>
                 </div>
             </div>
@@ -43,15 +43,15 @@
                             <tr class="hover:bg-gray-50">
                                 <td class="px-5 py-3 font-medium text-gray-900">{{ $item->product->name }}</td>
                                 <td class="px-5 py-3 text-right text-gray-600">{{ $item->quantity }}</td>
-                                <td class="px-5 py-3 text-right text-gray-600">${{ number_format($item->unit_price, 2) }}</td>
-                                <td class="px-5 py-3 text-right font-semibold">${{ number_format($item->subtotal, 2) }}</td>
+                                <td class="px-5 py-3 text-right text-gray-600">₦{{ number_format($item->unit_price, 2) }}</td>
+                                <td class="px-5 py-3 text-right font-semibold">₦{{ number_format($item->subtotal, 2) }}</td>
                             </tr>
                         @endforeach
                     </tbody>
                     <tfoot class="bg-gray-50 border-t border-gray-200">
                         <tr>
                             <td colspan="3" class="px-5 py-3 text-right text-sm font-semibold text-gray-700">Total</td>
-                            <td class="px-5 py-3 text-right text-sm font-bold text-emerald-600">${{ number_format($sale->total_amount, 2) }}</td>
+                            <td class="px-5 py-3 text-right text-sm font-bold text-emerald-600">₦{{ number_format($sale->total_amount, 2) }}</td>
                         </tr>
                     </tfoot>
                 </table>

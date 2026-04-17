@@ -44,7 +44,7 @@
                         <td class="px-6 py-4 font-medium text-gray-900">{{ $order->supplier_name }}</td>
                         <td class="px-6 py-4 text-gray-500">{{ $order->order_date->format('M d, Y') }}</td>
                         <td class="px-6 py-4 text-gray-500">{{ $order->expected_date?->format('M d, Y') ?? '—' }}</td>
-                        <td class="px-6 py-4 text-right font-semibold">${{ number_format($order->total_amount, 2) }}</td>
+                        <td class="px-6 py-4 text-right font-semibold">₦{{ number_format($order->total_amount, 2) }}</td>
                         <td class="px-6 py-4 text-center">
                             @php $colors = ['draft'=>'bg-gray-100 text-gray-600','ordered'=>'bg-blue-100 text-blue-700','received'=>'bg-green-100 text-green-700','partial'=>'bg-amber-100 text-amber-700','cancelled'=>'bg-red-100 text-red-700']; @endphp
                             <span class="px-2 py-1 text-xs font-medium rounded-full {{ $colors[$order->status] ?? '' }}">{{ ucfirst($order->status) }}</span>

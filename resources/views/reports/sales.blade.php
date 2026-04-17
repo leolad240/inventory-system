@@ -17,7 +17,7 @@
         </div>
         <div class="bg-emerald-50 rounded-xl border border-emerald-200 p-5">
             <p class="text-xs text-emerald-600 uppercase tracking-wider mb-1">Total Revenue</p>
-            <p class="text-2xl font-bold text-emerald-700">${{ number_format($totalRevenue, 2) }}</p>
+            <p class="text-2xl font-bold text-emerald-700">₦{{ number_format($totalRevenue, 2) }}</p>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
                         <div class="flex items-center justify-between text-sm">
                             <span class="text-gray-600">{{ \Carbon\Carbon::parse($date)->format('M d, Y') }}</span>
                             <div class="text-right">
-                                <span class="font-semibold">${{ number_format($data['total'], 2) }}</span>
+                                <span class="font-semibold">₦{{ number_format($data['total'], 2) }}</span>
                                 <span class="text-gray-400 text-xs ml-2">({{ $data['count'] }} orders)</span>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <p class="text-sm font-medium text-gray-900 truncate">{{ $item->product->name }}</p>
                                 <p class="text-xs text-gray-500">{{ $item->total_qty }} units sold</p>
                             </div>
-                            <span class="text-sm font-semibold text-emerald-600">${{ number_format($item->total_revenue, 2) }}</span>
+                            <span class="text-sm font-semibold text-emerald-600">₦{{ number_format($item->total_revenue, 2) }}</span>
                         </div>
                     @endforeach
                 </div>

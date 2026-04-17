@@ -11,7 +11,7 @@
     <div class="mt-2 mb-4 flex items-center gap-4">
         <div class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-2 text-sm">
             <span class="text-emerald-600 font-medium">Total Revenue: </span>
-            <span class="text-emerald-800 font-bold">${{ number_format($totalRevenue, 2) }}</span>
+            <span class="text-emerald-800 font-bold">₦{{ number_format($totalRevenue, 2) }}</span>
         </div>
     </div>
 
@@ -49,7 +49,7 @@
                         <td class="px-6 py-4 font-mono text-xs font-semibold text-indigo-600">{{ $sale->sale_number }}</td>
                         <td class="px-6 py-4 text-gray-700">{{ $sale->customer_name ?? 'Walk-in' }}</td>
                         <td class="px-6 py-4 text-gray-500">{{ $sale->items_count ?? '—' }}</td>
-                        <td class="px-6 py-4 text-right font-semibold text-emerald-600">${{ number_format($sale->total_amount, 2) }}</td>
+                        <td class="px-6 py-4 text-right font-semibold text-emerald-600">₦{{ number_format($sale->total_amount, 2) }}</td>
                         <td class="px-6 py-4 text-gray-500 text-xs">{{ $sale->user?->name ?? '—' }}</td>
                         <td class="px-6 py-4 text-gray-500 text-xs">{{ $sale->created_at->format('M d, Y H:i') }}</td>
                         <td class="px-6 py-4 text-right">

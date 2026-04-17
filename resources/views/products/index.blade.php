@@ -52,8 +52,8 @@
                         </td>
                         <td class="px-6 py-4 text-gray-500">{{ $product->category?->name ?? '—' }}</td>
                         <td class="px-6 py-4 text-gray-500 font-mono text-xs">{{ $product->sku }}</td>
-                        <td class="px-6 py-4 text-right text-gray-600">${{ number_format($product->cost_price, 2) }}</td>
-                        <td class="px-6 py-4 text-right font-medium text-gray-900">${{ number_format($product->selling_price, 2) }}</td>
+                        <td class="px-6 py-4 text-right text-gray-600">₦{{ number_format($product->cost_price, 2) }}</td>
+                        <td class="px-6 py-4 text-right font-medium text-gray-900">₦{{ number_format($product->selling_price, 2) }}</td>
                         <td class="px-6 py-4 text-center">
                             @if($product->quantity == 0)
                                 <span class="px-2 py-1 text-xs font-bold rounded-full bg-red-100 text-red-700">0</span>

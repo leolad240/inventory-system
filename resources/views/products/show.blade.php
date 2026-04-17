@@ -27,8 +27,8 @@
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between"><span class="text-gray-500">Category</span><span class="font-medium">{{ $product->category?->name ?? '—' }}</span></div>
                     <div class="flex justify-between"><span class="text-gray-500">Unit</span><span class="font-medium capitalize">{{ $product->unit }}</span></div>
-                    <div class="flex justify-between"><span class="text-gray-500">Cost Price</span><span class="font-medium">${{ number_format($product->cost_price, 2) }}</span></div>
-                    <div class="flex justify-between"><span class="text-gray-500">Selling Price</span><span class="font-medium">${{ number_format($product->selling_price, 2) }}</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500">Cost Price</span><span class="font-medium">₦{{ number_format($product->cost_price, 2) }}</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500">Selling Price</span><span class="font-medium">₦{{ number_format($product->selling_price, 2) }}</span></div>
                     <div class="flex justify-between"><span class="text-gray-500">Margin</span>
                         @if($product->cost_price > 0)
                             <span class="font-medium text-emerald-600">{{ number_format((($product->selling_price - $product->cost_price) / $product->cost_price) * 100, 1) }}%</span>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="border-t border-gray-100 pt-3 space-y-2 text-sm">
                     <div class="flex justify-between"><span class="text-gray-500">Reorder Level</span><span class="font-medium">{{ $product->reorder_level }}</span></div>
-                    <div class="flex justify-between"><span class="text-gray-500">Stock Value</span><span class="font-medium">${{ number_format($product->stock_value, 2) }}</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500">Stock Value</span><span class="font-medium">₦{{ number_format($product->stock_value, 2) }}</span></div>
                 </div>
             </div>
         </div>
