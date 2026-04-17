@@ -149,7 +149,7 @@
             data: {
                 labels: {!! json_encode($chartLabels) !!},
                 datasets: [{
-                    label: 'Revenue ($)',
+                    label: 'Revenue (₦)',
                     data: {!! json_encode($chartData) !!},
                     borderColor: '#6366f1',
                     backgroundColor: 'rgba(99, 102, 241, 0.08)',
@@ -167,7 +167,7 @@
                     y: {
                         beginAtZero: true,
                         grid: { color: 'rgba(0,0,0,0.05)' },
-                        ticks: { callback: v => '$' + v }
+                        ticks: { callback: v => '₦' + v }
                     },
                     x: { grid: { display: false } }
                 }
